@@ -1,0 +1,47 @@
+body { font-family: "Open Sans", arial, sans-serif, 'Roboto Slab', serif; font-size: 16px; padding-top: 20px; background-color: #e9e8da;}
+table form { margin-bottom: 0; }
+form ul { margin-left: 0; list-style: none; }
+.error { color: red; font-style: italic; }
+.btn-blank {color: #FFF;background-color: none; border-color: #FFF;}
+.btn-blank:hover{color: #FFF; background-color: #3276b1;}
+.gesci.login .wrap {
+  padding-top: 250px;
+}
+.gesci .wrap {
+  width: 100%;
+}
+.gesci.login .form-wrap {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.gesci.login .brand {
+  text-align: center;
+  margin-top: 80px;
+}
+.gesci.login .horizontal-divider {
+margin: 0 auto;
+position: relative;
+width: 1px;
+height: 250px;
+background-color: #cccccc;
+}
+.gesci.login .reset {
+  padding: 10px 15px;
+  border-radius: 3px;
+  background-color: #78b310;
+  color: #ffffff;
+  -webkit-transition: background-color 300ms linear;
+  -moz-transition: background-color 300ms linear;
+  -o-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
+}
+
+.gesci.login input[type="email"], input[type="text"], input[type="password"] {
+  box-shadow: none;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  height: 45px;
+  color: #505050;
+}
