@@ -10,6 +10,12 @@
       <div class="form-group">
         <label for="sponsoring_organisation">Sponsoring Ministry/Organisation</label>
         {{Form::select('sponsoring_organisation', Work::$sponsors, Input::old('sponsoring_organisation'), ['class' => 'form-control questions'])}}
+
+        @if($work->sponsoring_organisation_details)
+          <div class="more-wrapper"><br>
+            <label>Name of <span>{{$work->sponsoring_organisation}} </span> </label>
+          <input name="sponsoring_organisation_details" value="{{$work->sponsoring_organisation_details}}" class="form-control" id="more"></div>
+        @endif
       </div>
 
       <div class="form-group">
