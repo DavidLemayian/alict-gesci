@@ -4,7 +4,7 @@
 <div class="row">
   <div class="panel panel-warning">
     <div class="panel-heading">
-        Educational Information
+        Education
     </div>
     <div class="panel-body">
       {{ Form::model($education, array('method' => 'PATCH', 'route' => array('educations.update', $education->id))) }}
