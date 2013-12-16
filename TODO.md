@@ -8,7 +8,7 @@ Please ensure that the email addresses that you provide are correct and function
 - Mobile number. Accompanying text, again, missing.
 (include country code pre-fix with +) [Done]
 
-- Passport number. This is still missing.
+- Passport number. This is still missing. [Done]
 
 - Please change 'Educational Information' to 'Education' [Done]
 
@@ -18,9 +18,9 @@ Please ensure that the email addresses that you provide are correct and function
 
 - It should read 'Year of Completion' and not 'Year of Graduation' [Done]
 
-- You have left out the name of the institution. 'Institution delivering the course'
+- You have left out the name of the institution. 'Institution delivering the course' [It was not clear what page this query is about]
 
-- Under 'Work History', I don't see the text field for the last few options under 'Sponsoring Ministry'Organisation'
+- Under 'Work History', I don't see the text field for the last few options under 'Sponsoring Ministry'Organisation' [Done]
 
 - Under 'Supervisor' please change 'Firstname' and 'Lastname' to 'First name' and 'Last name'. These are separate words and should not be combined into one word. [Done]
 
@@ -28,4 +28,4 @@ Please ensure that the email addresses that you provide are correct and function
 
 - Under 'Language Skills' you have 'Spoken English' twice instead of 'Spoken English' and 'Written English' - [Done]
 
-- Declarations - you have not replaced the text with the text from the current form. You may have assumed the text is the same. It is not. Replace all text in Declarations with the text from the current version of the form - in its entirety.
+- Declarations - you have not replaced the text with the text from the current form. You may have assumed the text is the same. It is not. Replace all text in Declarations with the text from the current version of the form - in its entirety. [Done]
