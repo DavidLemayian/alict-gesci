@@ -9,12 +9,12 @@
 <div class="panel-body">
 {{ Form::model($profile, array('method' => 'PATCH', 'route' => array('profiles.update', $profile->id))) }}
     <div class="form-group">
-        {{ Form::label('firstname', 'Firstname:') }}
+        {{ Form::label('firstname', 'First name:') }}
         {{ Form::text('firstname', $profile->firstname, ['class' => 'form-control']) }}
     </div>
 
     <div class="form-group">
-        {{ Form::label('lastname', 'Lastname:') }}
+        {{ Form::label('lastname', 'Last name:') }}
         {{ Form::text('lastname', $profile->lastname, ['class' => 'form-control']) }}
     </div>
 
@@ -52,6 +52,12 @@
       {{ Form::label('mobile', 'Mobile: (include country code pre-fix with +)') }}
       {{ Form::text('mobile', Input::old('mobile'), ['class' => 'form-control', 'placeholder' => 'Include country Prefix with +']) }}
     </div>
+
+    <div class="form-group">
+      {{ Form::label('passport', 'Passport:') }}
+      {{ Form::text('passport', Input::old('passport'), ['class' => 'form-control']) }}
+    </div>
+
     </div>
     <div class="panel-footer">
     	{{ Form::submit('Update Profile', array('class' => 'btn btn-info btn-lg')) }}

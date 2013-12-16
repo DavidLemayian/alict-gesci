@@ -23,6 +23,7 @@ class CreateProfilesTable extends Migration {
 			$table->string('workaddress')->nullable();
 			$table->string('email')->unique();
 			$table->string('mobile')->unique();
+			$table->string('passport')->unique();
 			$table->timestamps();
 		});
 	}
