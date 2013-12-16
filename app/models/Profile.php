@@ -11,7 +11,7 @@ class Profile extends Eloquent {
 		'dob'         => 'required|date|date_format:Y-m-d',
 		'nationality' => 'required',
 		'workaddress' => 'required',
-		'email'       => 'required',
+		'email'       => 'required|unique:users,email',
 		'mobile'      => 'required|min:10|regex:/^\+/'
 	);
 
