@@ -25,7 +25,7 @@
     </div>
 
     <div class="form-group">
-      <label>5. All referenced GESCI authored materials must be attributed to GESCI.</label>
+      <label>5. All referenced GESCI authored materials must be attributed to GESCI.</label> <br>
       {{Form::checkbox('five', true)}}
     </div>
 	</div>

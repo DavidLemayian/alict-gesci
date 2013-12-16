@@ -7,6 +7,7 @@ class Declaration extends Eloquent {
 		'one'   => 'accepted',
 		'two'   => 'accepted',
 		'three' => 'accepted',
-		'four'  => 'accepted'
+    'four'  => 'accepted',
+		'five'  => 'accepted',
 	);
 }
