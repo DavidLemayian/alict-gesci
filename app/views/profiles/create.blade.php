@@ -39,7 +39,7 @@
   </div>
 
   <div class="form-group">
-    {{ Form::label('workaddress', 'Workaddress:') }}
+    {{ Form::label('workaddress', 'Workplace address:') }}
     {{ Form::text('workaddress', Input::old('workaddress'), ['class' => 'form-control']) }}
   </div>
 
@@ -49,7 +49,7 @@
   </div>
 
   <div class="form-group">
-    {{ Form::label('mobile', 'Mobile:') }}
+    {{ Form::label('mobile', 'Mobile: (include country code pre-fix with +)') }}
     {{ Form::text('mobile', Input::old('mobile'), ['class' => 'form-control', 'placeholder' => 'Include country Prefix eg +254...']) }}
   </div>
 
@@ -59,6 +59,10 @@
 {{ Form::close() }}
 </div>
 </div>
+</div>
+
+<div class="well">
+  <p class="lead">**Please ensure that the email addresses that you provide are correct and functioning. Ensure that the primary email address you provide is the email address you wish us to use when corresponding with you on all matters related to this application and to the ALICT course.</p>
 </div>
 
 @stop
