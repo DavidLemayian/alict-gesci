@@ -1,25 +1,27 @@
 $(document).ready(function(){
-  $('.questions').on('change', function(){
+  $('.questions').on('change focus', function(){
+    var old_input_value = '{{Input::old("sponsoring_organisation_details")}}';
     var select = $(this),
       select_name = select.attr('name'),
       form_group = select.parents(".form-group"),
       value = select.val(),
       text = $('option[value="' + value +'"]', select).text(),
-      new_input = $('<input name="'+value+'" class="form-control"')
+      new_input = $('<input name="sponsoring_organisation_details" class="form-control" id="more">')
       last_character = text.slice(-1);
       var wrap = $('<div class="more-wrapper">');
 
-      if (last_character == "*") {
-        if (!new_input.length) {
-          wrap.append('<br><label>Name of <span>' + text +' </span> </label>');
-          wrap.append('<input name="'+value+'" class="form-control">');
-          form_group.append(wrap);
-        } else {
-          $('label span', form_group).text(text);
-        }
+
+    if (last_character == "*") {
+      if (!$('#more').length) {
+        wrap.append('<br><label>Name of <span>' + text +' </span> </label>');
+        wrap.append(new_input);
+        form_group.append(wrap);
       } else {
-        $('.more-wrapper', form_group).remove();
+        $('label span', form_group).text(text);
       }
+    } else {
+      $('.more-wrapper', form_group).remove();
+    }
   });
 
 
@@ -30,6 +32,12 @@ $(document).ready(function(){
   $('#skills-five').multiselect({
     buttonClass: 'btn btn-default'
   });
+
+  // Textarea count
+  // $("textarea").textareaCounter({ limit: 100 });
+  $("#statement-one").textareaCounter({ limit: 100 });
+  $("#statement-two").textareaCounter({ limit: 100 });
+  $("#statement-three").textareaCounter({ limit: 100 });
 
 
   // DatePicker for Date of Birth

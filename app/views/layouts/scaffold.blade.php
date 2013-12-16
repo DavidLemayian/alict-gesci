@@ -11,6 +11,7 @@
 		<script src="/assets/js/bootstrap.min.js"></script>
 		<script src="/assets/js/bootstrap-multiselect.js"></script>
 		<script src="/assets/js/bootstrap-datepicker.js"></script>
+		<script src="/assets/js/textareacounter.js"></script>
 		<script src="/assets/js/app.js"></script>
 
 		<!-- Google Fonts -->
