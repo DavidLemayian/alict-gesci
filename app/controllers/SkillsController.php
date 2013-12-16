@@ -21,7 +21,7 @@ class SkillsController extends BaseController {
 	 */
 	public function index()
 	{
-		$skill = $Auth::user()->skill;
+		$skill = Auth::user()->skill;
 		if(is_null($skill))
 		{
 			return Redirect::action('skills.create');
