@@ -21,11 +21,12 @@ class SkillsController extends BaseController {
 	 */
 	public function index()
 	{
-		$skill = $this->skill->processRecord(Auth::user()->skill->toArray());
+		$skill = $Auth::user()->skill;
 		if(is_null($skill))
 		{
 			return Redirect::action('skills.create');
 		}
+		$skill = $this->skill->processRecord($skill->toArray());
 
 		return View::make('skills.edit', compact('skill'));
 	}
