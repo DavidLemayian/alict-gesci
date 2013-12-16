@@ -19,6 +19,7 @@ class CreateDeclarationsTable extends Migration {
 			$table->boolean('two');
 			$table->boolean('three');
 			$table->boolean('four');
+			$table->boolean('five');
 			$table->timestamps();
 		});
 	}
