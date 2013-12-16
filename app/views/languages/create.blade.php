@@ -12,7 +12,7 @@
         {{Form::select('spoken_english', ['Fluent', 'Good Command', 'Basic'], Input::old('spoken_english'), ['class' => 'form-control'])}}
       </div>
       <div class="form-group">
-        <label for="written_english">Spoken English</label>
+        <label for="written_english">Written English</label>
         {{Form::select('written_english', ['Excellent' , 'Good', 'Basic'], Input::old('written_english'), ['class' => 'form-control'])}}
       </div>
   </div>
