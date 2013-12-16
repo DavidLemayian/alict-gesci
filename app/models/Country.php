@@ -4,5 +4,5 @@
 */
 class Country extends Eloquent
 {
-  public static $countries = ["Botswana","Ethiopia","Ghana","Kenya","Lesotho","Malawi","Mozambique","Namibia","Rwanda","Tanzania","Uganda","Zambia"];
+  public static $countries = ["Botswana","Ethiopia","Ghana","Kenya","Malawi", "Mauritius", "Mozambique","Namibia","Rwanda","Tanzania","South Africa", "Uganda","Zambia"];
 }
