@@ -12,7 +12,8 @@ class Profile extends Eloquent {
 		'nationality' => 'required',
 		'workaddress' => 'required',
 		'email'       => 'required|unique:users,email',
-		'mobile'      => 'required|min:10|regex:/^\+/'
+		'mobile'      => 'required|min:10|regex:/^\+/',
+		'passport'    => 'required',
 	);
 
 	public function user()
