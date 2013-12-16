@@ -10,12 +10,12 @@
     <div class="panel-body">
         {{ Form::model($supervisor, array('method' => 'PATCH', 'route' => array('supervisors.update', $supervisor->id))) }}
         <div class="form-group">
-          {{ Form::label('firstname', 'Firstname:') }}
+          {{ Form::label('firstname', 'First name:') }}
           {{ Form::text('firstname', Input::old('firstname'), ['class' => 'form-control']) }}
         </div>
 
         <div class="form-group">
-          {{ Form::label('lastname', 'Lastname:') }}
+          {{ Form::label('lastname', 'Last name:') }}
           {{ Form::text('lastname', Input::old('lastname'), ['class' => 'form-control']) }}
         </div>
 

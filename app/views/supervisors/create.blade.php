@@ -9,12 +9,12 @@
     <div class="panel-body">
       {{ Form::open(array('route' => 'supervisors.store')) }}
         <div class="form-group">
-          {{ Form::label('firstname', 'Firstname:') }}
+          {{ Form::label('firstname', 'First name:') }}
           {{ Form::text('firstname', Input::old('firstname'), ['class' => 'form-control']) }}
         </div>
 
         <div class="form-group">
-          {{ Form::label('lastname', 'Lastname:') }}
+          {{ Form::label('lastname', 'Last name:') }}
           {{ Form::text('lastname', Input::old('lastname'), ['class' => 'form-control']) }}
         </div>
 
