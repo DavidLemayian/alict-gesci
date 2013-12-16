@@ -4,7 +4,7 @@
 <div class="row">
   <div class="panel panel-warning">
     <div class="panel-heading">
-        Update Professional Course or Training
+        Update relevant professional courses and Training
     </div>
     <div class="panel-body">
       {{ Form::model($course, array('method' => 'PATCH', 'route' => array('courses.update', $course->id))) }}
@@ -14,12 +14,12 @@
       </div>
 
       <div class="form-group">
-        {{ Form::label('graduation_year', 'Year of Graduation:') }}
+        {{ Form::label('graduation_year', 'Year of Completion:') }}
         {{ Form::text('graduation_year', Input::old('graduation_year'), ['class' => 'form-control']) }}
       </div>
 
       <div class="form-group">
-        {{ Form::label('institution', 'Institution:') }}
+        {{ Form::label('institution', 'Institution delivering the course:') }}
         {{ Form::text('institution', Input::old('institution'), ['class' => 'form-control']) }}
       </div>
 
