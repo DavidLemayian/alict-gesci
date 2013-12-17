@@ -29,3 +29,17 @@ Please ensure that the email addresses that you provide are correct and function
 - Under 'Language Skills' you have 'Spoken English' twice instead of 'Spoken English' and 'Written English' - [Done]
 
 - Declarations - you have not replaced the text with the text from the current form. You may have assumed the text is the same. It is not. Replace all text in Declarations with the text from the current version of the form - in its entirety. [Done]
+
+- About
+Please create line-break between 'No course fees required' and next paragraph.[Done]
+
+Courses
+Please make 'T' small caps 't' in - Add relevant professional courses and training [Done]
+
+Work History
+'Other' under position does not show text field when clicked on
+
+
+Just make the above corrections and update the skills page and then I'll take one more look at it and hopefully there will be no further changes required right now.
+
+Then we will need to test it, especially the statements page where they must contribute 100 words to submit. We need to figure out how that will work. It should be a 'minimum' of 100 probably.
