@@ -13,7 +13,6 @@ class Skill extends Eloquent {
     'seven' => 'required',
     'eight' => 'required',
     'nine'  => 'required',
-    'ten'   => 'required',
 	);
 
   public function user()

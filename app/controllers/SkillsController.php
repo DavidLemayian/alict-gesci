@@ -24,7 +24,7 @@ class SkillsController extends BaseController {
 		$skill = Auth::user()->skill;
 		if(is_null($skill))
 		{
-			return Redirect::action('skills.create');
+			return Redirect::route('skills.create');
 		}
 		$skill = $this->skill->processRecord($skill->toArray());
 
@@ -90,8 +90,6 @@ class SkillsController extends BaseController {
 	public function edit($id)
 	{
 		$skill = $this->skill->find($id);
-
-		dd(array_dot(explode(',', $skill->ten)));
 
 		if (is_null($skill))
 		{

@@ -24,7 +24,7 @@ class CreateSkillsTable extends Migration {
 			$table->string('seven');
 			$table->string('eight');
 			$table->string('nine');
-			$table->string('ten');
+			$table->string('nine_other');
 			$table->timestamps();
 		});
 	}
