@@ -8,7 +8,7 @@
     <div class="row">
 
       <div class="col-xs-12 col-sm-3 brand animated fadeInUp" data-animation="fadeInUp">
-        <a href="/"><img src="/assets/img/logo.jpg" alt="gesci"></a>
+        <a href="/login"><img src="/assets/img/logo.jpg" alt="gesci"></a>
       </div>
       <div class="col-sm-1 hidden-xs">
         <div class="horizontal-divider"></div>
@@ -47,7 +47,7 @@
 
                 <div class="form-actions form-group">
                   <button type="submit" class="btn btn-primary btn-lg btn-block">{{{ Lang::get('confide::confide.signup.submit') }}}</button>
-                  <a href="/" class="btn btn-default btn-lg btn-block">Cancel</a>
+                  <a href="/login" class="btn btn-default btn-lg btn-block">Cancel</a>
                 </div>
 
             </fieldset>
