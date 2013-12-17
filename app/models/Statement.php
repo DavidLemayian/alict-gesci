@@ -1,9 +1,9 @@
 <?php
 
 class Statement extends Eloquent {
-	protected $guarded = [];
+  protected $guarded = [];
 
-	public static $rules =
+  public static $rules =
   [
     'statement_one' => 'required',
     'statement_two' => 'required',

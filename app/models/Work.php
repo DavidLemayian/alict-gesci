@@ -1,9 +1,9 @@
 <?php
 
 class Work extends Eloquent {
-	protected $guarded = [];
+  protected $guarded = [];
 
-	public static $rules =
+  public static $rules =
   [
     'sponsoring_organisation'       => 'required',
     'sector'                        => 'required',

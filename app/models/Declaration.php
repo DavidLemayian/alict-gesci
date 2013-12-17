@@ -1,9 +1,9 @@
 <?php
 
 class Declaration extends Eloquent {
-	protected $guarded = [];
+  protected $guarded = [];
 
-	public static $rules =
+  public static $rules =
   [
 		'one'   => 'accepted',
 		'two'   => 'accepted',

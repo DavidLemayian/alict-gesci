@@ -1,9 +1,9 @@
 <?php
 
 class Education extends Eloquent {
-	protected $guarded = [];
+  protected $guarded = [];
 
-	public static $rules =
+  public static $rules =
   [
 		'highest_qualification' => 'required',
 		'graduation_year'       => 'required|numeric|between:1950,2013',

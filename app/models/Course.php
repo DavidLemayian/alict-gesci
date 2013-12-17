@@ -1,9 +1,9 @@
 <?php
 
 class Course extends Eloquent {
-	protected $guarded = [];
+  protected $guarded = [];
 
-	public static $rules =
+  public static $rules =
   [
 		'course'          => 'required',
 		'graduation_year' => 'required',

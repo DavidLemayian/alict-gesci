@@ -1,9 +1,9 @@
 <?php
 
 class Language extends Eloquent {
-	protected $guarded = [];
+  protected $guarded = [];
 
-	public static $rules =
+  public static $rules =
   [
     'spoken_english' => 'required',
 		'written_english' => 'required',
