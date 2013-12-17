@@ -11,8 +11,10 @@
 |
 */
 
+Route::get('/', function(){
+  return View::make('about');
+});
 Route::group(['before' => 'auth'], function(){
-  Route::get('/', 'ProfilesController@index');
   Route::resource('declarations', 'DeclarationsController');
   Route::resource('statements', 'StatementsController');
   Route::resource('languages', 'LanguagesController');

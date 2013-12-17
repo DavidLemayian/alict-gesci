@@ -65,9 +65,9 @@ class UserController extends BaseController {
     {
         if( Confide::user() )
         {
-            // If user is logged, redirect to internal 
+            // If user is logged, redirect to internal
             // page, change it to '/admin', '/dashboard' or something
-            return Redirect::to('/');
+            return Redirect::to('/profiles');
         }
         else
         {
@@ -92,13 +92,13 @@ class UserController extends BaseController {
         // with the second parameter as true.
         // logAttempt will check if the 'email' perhaps is the username.
         // Get the value from the config file instead of changing the controller
-        if ( Confide::logAttempt( $input, Config::get('confide::signup_confirm') ) ) 
+        if ( Confide::logAttempt( $input, Config::get('confide::signup_confirm') ) )
         {
             // Redirect the user to the URL they were trying to access before
             // caught by the authentication filter IE Redirect::guest('user/login').
             // Otherwise fallback to '/'
             // Fix pull #145
-            return Redirect::intended('/'); // change it to '/admin', '/dashboard' or something
+            return Redirect::intended('/profiles'); // change it to '/admin', '/dashboard' or something
         }
         else
         {
@@ -220,7 +220,7 @@ class UserController extends BaseController {
     public function logout()
     {
         Confide::logout();
-        
+
         return Redirect::to('/');
     }
 
