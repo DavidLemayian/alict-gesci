@@ -1,9 +1,10 @@
 <?php
 
 class Supervisor extends Eloquent {
-	protected $guarded = array();
+	protected $guarded = [];
 
-	public static $rules = array(
+	public static $rules =
+	[
 		'firstname'       => 'required',
 		'lastname'        => 'required',
 		'title'           => 'required',
@@ -11,9 +12,10 @@ class Supervisor extends Eloquent {
 		'telephone'       => 'unique:profiles,mobile',
 		'primary_email'   => 'required|email|unique:supervisors,primary_email|unique:supervisors,secondary_email',
 		'secondary_email' => 'email|unique:supervisors,primary_email|unique:supervisors,secondary_email'
-	);
+	];
 
-	public static $updateRules = array(
+	public static $updateRules =
+	[
 		'firstname'       => 'required',
 		'lastname'        => 'required',
 		'title'           => 'required',
@@ -21,7 +23,7 @@ class Supervisor extends Eloquent {
 		'telephone'       => 'unique:profiles,mobile',
 		'primary_email'   => 'required|email',
 		'secondary_email' => 'email'
-	);
+	];
 
 	public function user()
 	{

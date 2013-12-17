@@ -1,7 +1,7 @@
 <?php
 
 class Work extends Eloquent {
-	protected $guarded = array();
+	protected $guarded = [];
 
 	public static $rules =
   [
@@ -34,14 +34,14 @@ class Work extends Eloquent {
 
   public static $roles =
   [
-    'Director' => 'Director',
-    'Assistant Director' => 'Assistant Director',
-    'Manager' => 'Manager',
-    'Specialist ' => 'Specialist',
+    'Director'             => 'Director',
+    'Assistant Director'   => 'Assistant Director',
+    'Manager'              => 'Manager',
+    'Specialist '          => 'Specialist',
     'Curriculum Developer' => 'Curriculum Developer',
-    'Officer' => 'Officer',
-    'Coordinator' => 'Coordinator',
-    'Other*' => 'Other*',
+    'Officer'              => 'Officer',
+    'Coordinator'          => 'Coordinator',
+    'Other*'               => 'Other*',
   ];
 
   public function user()

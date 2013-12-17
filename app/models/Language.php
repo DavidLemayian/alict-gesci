@@ -1,7 +1,7 @@
 <?php
 
 class Language extends Eloquent {
-	protected $guarded = array();
+	protected $guarded = [];
 
 	public static $rules =
   [

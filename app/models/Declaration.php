@@ -1,13 +1,14 @@
 <?php
 
 class Declaration extends Eloquent {
-	protected $guarded = array();
+	protected $guarded = [];
 
-	public static $rules = array(
+	public static $rules =
+  [
 		'one'   => 'accepted',
 		'two'   => 'accepted',
 		'three' => 'accepted',
     'four'  => 'accepted',
 		'five'  => 'accepted',
-	);
+	];
 }

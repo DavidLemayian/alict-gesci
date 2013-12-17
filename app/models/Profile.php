@@ -1,9 +1,10 @@
 <?php
 
 class Profile extends Eloquent {
-	protected $guarded = array();
+	protected $guarded = [];
 
-	public static $rules = array(
+	public static $rules =
+	[
 		'firstname'   => 'required',
 		'lastname'    => 'required',
 		'country'     => 'required',
@@ -14,7 +15,7 @@ class Profile extends Eloquent {
 		'email'       => 'required|unique:users,email',
 		'mobile'      => 'required|min:10|regex:/^\+/',
 		'passport'    => 'required',
-	);
+	];
 
 	public function user()
 	{

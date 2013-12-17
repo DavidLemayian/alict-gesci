@@ -1,9 +1,10 @@
 <?php
 
 class Skill extends Eloquent {
-	protected $guarded = array();
+	protected $guarded = [];
 
-	public static $rules = array(
+	public static $rules =
+  [
     'one'   => 'required',
     'two'   => 'required',
     'three' => 'required',
@@ -13,7 +14,7 @@ class Skill extends Eloquent {
     'seven' => 'required',
     'eight' => 'required',
     'nine'  => 'required',
-	);
+	];
 
   public function user()
   {
