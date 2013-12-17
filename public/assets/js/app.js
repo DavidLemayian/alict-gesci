@@ -26,7 +26,7 @@ $(document).ready(function(){
 
 
   // MultiSelect for Different Skills
-  $('#skills-ten').multiselect({
+  $('#skills-nine').multiselect({
     buttonClass: 'btn btn-default'
   });
   $('#skills-five').multiselect({
