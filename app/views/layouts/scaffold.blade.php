@@ -20,8 +20,19 @@
 	</head>
 
 	<body>
-
-
+	<div class="container">
+		<div class="header">
+      <ul class="nav nav-pills pull-right">
+        <li {{(Request::is('/')) ? 'class="active"' : '' }}><a href="/">About</a></li>
+        @if (Auth::user())
+          <li {{(Request::is('/user/logout')) ? 'class="active"' : '' }}><a href="/user/logout">Logout</a></li>
+        @else
+          <li {{(Request::is('/login')) ? 'class="active"' : '' }}><a href="/login">Register</a></li>
+        @endif
+      </ul>
+      <h3 class="text-muted">ALICT 2014</h3>
+    </div>
+	</div>
 		<div class="container">
 		@if (Auth::user())
 			<div class="col-md-4">
