@@ -5,7 +5,7 @@ form ul { margin-left: 0; list-style: none; }
 .btn-blank {color: #FFF;background-color: none; border-color: #FFF;}
 .btn-blank:hover{color: #FFF; background-color: #3276b1;}
 .gesci.login .wrap {
-  padding-top: 250px;
+  padding-top: 150px;
 }
 .gesci .wrap {
   width: 100%;
@@ -38,10 +38,26 @@ background-color: #cccccc;
   transition: background-color 300ms linear;
 }
 
+.gesci.login .lead {
+  font-size: 16px;
+}
+
 .gesci.login input[type="email"], input[type="text"], input[type="password"] {
   box-shadow: none;
   padding-left: 10px;
   margin-bottom: 20px;
   height: 45px;
   color: #505050;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
 }
