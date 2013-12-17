@@ -54,7 +54,7 @@
   </div>
 
   <div class="form-group">
-    {{ Form::label('passport', 'Passport:') }}
+    {{ Form::label('passport', 'Passport Number:') }}
     {{ Form::text('passport', Input::old('passport'), ['class' => 'form-control']) }}
   </div>
 
