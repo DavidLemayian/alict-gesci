@@ -9,11 +9,11 @@
   <div class="panel-body">
   {{ Form::open(array('route' => 'statements.store')) }}
     <div class="form-group">
-      <label>What are your reasons for applying for a place on this course? (100 Words)</label>
+      <label>What are your reasons for applying for a place on this course? 100 Words</label>
       {{Form::textarea('statement_one', Input::old('statement_one'), ['class' => 'form-control', 'id' => 'statement-one'])}}
       </div>
     <div class="form-group">
-      <label>How do you think you might use the knowledge and skills acquired on this course to benefit your organisation? (100 Words)</label>
+      <label>How do you think you might use the knowledge and skills acquired on this course to benefit your organisation? 100 Words</label>
       {{Form::textarea('statement_two', Input::old('statement_two'), ['class' => 'form-control', 'id' => 'statement-two'])}}
     </div>
     <div class="form-group">
