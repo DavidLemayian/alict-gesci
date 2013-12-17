@@ -1,6 +1,7 @@
 @extends('layouts.scaffold')
 
 @section('main')
+<div class="row">
 <div class="panel panel-warning">
   <div class="panel-heading">
     Language Skills
@@ -20,5 +21,6 @@
     {{ Form::submit('Add Langugage', array('class' => 'btn btn-info btn-lg')) }}
   </div>
     {{ Form::close() }}
+</div>
 </div>
 @stop
