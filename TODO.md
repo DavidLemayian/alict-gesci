@@ -1,6 +1,6 @@
-- [x] Introduction text still missing
+-[x] Introduction text still missing
 
-- [x] It should read 'Workplace address' and not 'Workaddress' [Done]
+-[x] It should read 'Workplace address' and not 'Workaddress' [Done]
 
 - [x] The text about why they need to provide a secondary email address is supposed to be included James and is very important. I don't know why you left this out. Without this many applicants will supply us with the same email address that they logged in with.
 Please ensure that the email addresses that you provide are correct and functioning. Ensure that the primary email address you provide is the email address you wish us to use when corresponding with you on all matters related to this application and to the ALICT course. [Done]
