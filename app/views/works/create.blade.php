@@ -1,7 +1,7 @@
 @extends('layouts.scaffold')
 
 @section('main')
-
+<div class="row">
 <div class="panel panel-warning">
   <div class="panel-heading">
     Work History
@@ -49,5 +49,5 @@
   </div>
     {{ Form::close() }}
 </div>
-
+</div>
 @stop

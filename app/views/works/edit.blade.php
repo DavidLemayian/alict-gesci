@@ -1,6 +1,7 @@
 @extends('layouts.scaffold')
 
 @section('main')
+<div class="row">
 <div class="panel panel-warning">
   <div class="panel-heading">
     Work History
@@ -53,5 +54,6 @@
     {{Form::submit('Update Work History', ['class' => 'btn btn-info btn-lg'])}}
   </div>
     {{ Form::close() }}
+</div>
 </div>
 @stop
