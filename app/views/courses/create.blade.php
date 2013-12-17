@@ -4,7 +4,7 @@
 <div class="row">
   <div class="panel panel-warning">
     <div class="panel-heading">
-        Add relevant professional courses and Training
+        Add relevant professional courses and training
     </div>
     <div class="panel-body">
       {{ Form::open(array('route' => 'courses.store')) }}
