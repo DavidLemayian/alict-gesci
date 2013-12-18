@@ -37,7 +37,7 @@ Courses
 - [x] Please make 'T' small caps 't' in - Add relevant professional courses and training [Done]
 
 Work History
-'Other' under position does not show text field when clicked on
+-[x]'Other' under position does not show text field when clicked on [Done]
 
 
 Just make the above corrections and update the skills page and then I'll take one more look at it and hopefully there will be no further changes required right now.
