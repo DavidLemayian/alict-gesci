@@ -16,8 +16,10 @@ class CreateWorksTable extends Migration {
 			$table->increments('id');
 			$table->mediumInteger('user_id');
 			$table->string('sponsoring_organisation');
+			$table->string('sponsoring_organisation_details');
 			$table->string('sector');
 			$table->string('role');
+			$table->string('role_details');
 			$table->string('number_of_years_in_org');
 			$table->string('years_current_position');
 			$table->string('individuals_supervised');

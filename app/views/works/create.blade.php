@@ -10,7 +10,7 @@
     {{ Form::open(array('route' => 'works.store')) }}
       <div class="form-group">
         <label for="sponsoring_organisation">Sponsoring Ministry/Organisation</label>
-        {{Form::select('sponsoring_organisation', Work::$sponsors, Input::old('sponsoring_organisation'), ['class' => 'form-control questions'])}}
+        {{Form::select('sponsoring_organisation', Work::$sponsors, Input::old('sponsoring_organisation'), ['class' => 'form-control', 'id' => 'has-extras'])}}
       </div>
 
       <div class="form-group">
@@ -20,7 +20,7 @@
 
       <div class="form-group">
         <label for="role">Role/Position</label>
-        {{Form::select('role', Work::$roles, Input::old('role'), ['class' => 'form-control'])}}
+        {{Form::select('role', Work::$roles, Input::old('role'), ['class' => 'form-control', 'id' => 'role-extras'])}}
       </div>
 
       <div class="form-group">

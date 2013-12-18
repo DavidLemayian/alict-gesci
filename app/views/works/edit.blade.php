@@ -10,10 +10,10 @@
     {{ Form::model($work, array('method' => 'PATCH', 'route' => array('works.update', $work->id))) }}
       <div class="form-group">
         <label for="sponsoring_organisation">Sponsoring Ministry/Organisation</label>
-        {{Form::select('sponsoring_organisation', Work::$sponsors, Input::old('sponsoring_organisation'), ['class' => 'form-control questions'])}}
+        {{Form::select('sponsoring_organisation', Work::$sponsors, Input::old('sponsoring_organisation'), ['class' => 'form-control', 'id' => 'has-extras'])}}
 
         @if($work->sponsoring_organisation_details)
-          <div class="more-wrapper"><br>
+          <div class="org-wrapper"><br>
             <label>Name of <span>{{$work->sponsoring_organisation}} </span> </label>
           <input name="sponsoring_organisation_details" value="{{$work->sponsoring_organisation_details}}" class="form-control" id="more"></div>
         @endif
@@ -26,7 +26,13 @@
 
       <div class="form-group">
         <label for="role">Role/Position</label>
-        {{Form::select('role', Work::$roles, Input::old('role'), ['class' => 'form-control'])}}
+        {{Form::select('role', Work::$roles, Input::old('role'), ['class' => 'form-control', 'id' => 'role-extras'])}}
+
+        @if($work->role_details)
+          <div class="role-wrapper"><br>
+            <label>Name of <span>{{$work->role}} </span> </label>
+          <input name="role_details" value="{{$work->role_details}}" class="form-control" id="more"></div>
+        @endif
       </div>
 
       <div class="form-group">
