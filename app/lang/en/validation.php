@@ -68,6 +68,7 @@ return array(
 	),
 	"unique"           => "The :attribute has already been taken.",
 	"url"              => "The :attribute format is invalid.",
+	"word_count"       => "The :attribute must be more than :word_count words.",
 
 	/*
 	|--------------------------------------------------------------------------
