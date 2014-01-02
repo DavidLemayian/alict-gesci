@@ -5,9 +5,9 @@ class Statement extends Eloquent {
 
   public static $rules =
   [
-    'statement_one' => 'required',
-    'statement_two' => 'required',
-		'statement_three' => 'required',
+    'statement_one'   => 'required|word_count:100',
+    'statement_two'   => 'required|word_count:100',
+    'statement_three' => 'required|word_count:100',
 	];
 
   public function user()
