@@ -29,7 +29,7 @@
         </div>
       </div>
         <div class="panel-footer">
-      		{{ Form::submit('Update Record', array('class' => 'btn btn-info btn-lg')) }}
+      		{{ Form::submit('Update Details', array('class' => 'btn btn-info btn-lg')) }}
       	</div>
       {{ Form::close() }}
     </div>

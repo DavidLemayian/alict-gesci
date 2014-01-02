@@ -4,7 +4,7 @@
 <div class="row">
   <div class="panel panel-warning">
     <div class="panel-heading">
-        Technical Skills
+        Technical Skills and Related Questions
     </div>
     <div class="panel-body">
         {{ Form::model($skill, array('method' => 'PATCH', 'route' => array('skills.update', $skill->id))) }}

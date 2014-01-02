@@ -29,7 +29,7 @@
           </div>
         </div>
         <div class="panel-footer">
-            {{ Form::submit('Create Record', array('class' => 'btn btn-info btn-lg')) }}
+            {{ Form::submit('Save Details', array('class' => 'btn btn-info btn-lg')) }}
         </div>
       {{ Form::close() }}
     </div>
