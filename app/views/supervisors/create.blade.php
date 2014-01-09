@@ -44,7 +44,7 @@
         </div>
       </div>
       <div class="panel-footer">
-        {{ Form::submit('Add Supervisor', array('class' => 'btn btn-info')) }}
+        {{ Form::submit('Save Supervisor', array('class' => 'btn btn-info')) }}
       </div>
       {{ Form::close() }}
     </div>

@@ -22,7 +22,7 @@
     </div>
   </div>
   <div class="panel-footer">
-    {{Form::submit('Upload Statements', ['class' => 'btn btn-info btn-lg'])}}
+    {{Form::submit('Save Statements', ['class' => 'btn btn-info btn-lg'])}}
   </div>
   {{ Form::close() }}
 </div>

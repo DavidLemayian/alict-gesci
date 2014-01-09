@@ -18,7 +18,7 @@
       </div>
   </div>
   <div class="panel-footer">
-    {{ Form::submit('Add Langugage', array('class' => 'btn btn-info btn-lg')) }}
+    {{ Form::submit('Add Langugage Skill', array('class' => 'btn btn-info btn-lg')) }}
   </div>
     {{ Form::close() }}
 </div>

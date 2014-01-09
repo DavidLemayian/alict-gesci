@@ -115,7 +115,7 @@
         </div>
         </div>
         <div class="panel-footer">
-          {{Form::submit('Save Skills', ['class' => 'btn btn-default btn-lg'])}}
+          {{Form::submit('Update Skills', ['class' => 'btn btn-default btn-lg'])}}
         </div>
         {{ Form::close() }}
       </div>
