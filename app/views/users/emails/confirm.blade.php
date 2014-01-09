@@ -16,11 +16,14 @@
       <table style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.6; width: 100%; margin: 0; padding: 0;"><tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.6; margin: 0; padding: 0;"><td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.6; margin: 0; padding: 0;">&#13;
             <h1 style="font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 36px; line-height: 1.2; color: #000; font-weight: 200; margin: 40px 0 10px; padding: 0;">{{ Lang::get('confide::confide.email.account_confirmation.subject') }}</h1>&#13;
 &#13;
-            <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">{{ Lang::get('confide::confide.email.account_confirmation.greetings', array( 'name' =&gt; $user-&gt;username)) }},</p>&#13;
+            <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">
+            {{ Lang::get('confide::confide.email.account_confirmation.greetings', array( 'name' => $user->username)) }},</p>&#13;
 &#13;
-            <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">{{ Lang::get('confide::confide.email.account_confirmation.body') }}</p>&#13;
-            <a href="{{{ URL::to(&quot;user/confirm/{$user-&gt;confirmation_code}&quot;) }}}" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.6; color: #348eda; margin: 0; padding: 0;">&#13;
-                {{{ URL::to("user/confirm/{$user-&gt;confirmation_code}") }}}&#13;
+            <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">
+              {{ Lang::get('confide::confide.email.account_confirmation.body') }}
+            </p>&#13;
+            <a href="{{{ URL::to('user/confirm/{$user->confirmation_code}') }}}" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.6; color: #348eda; margin: 0; padding: 0;">&#13;
+                {{{ URL::to("user/confirm/{$user->confirmation_code}") }}}&#13;
             </a>&#13;
 &#13;
             <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">{{ Lang::get('confide::confide.email.account_confirmation.farewell') }}</p>&#13;
