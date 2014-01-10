@@ -4,6 +4,11 @@ use Zizaco\Confide\ConfideUser;
 
 class User extends ConfideUser {
 
+  public function application()
+  {
+    return $this->hasOne('Application');
+  }
+
   public function profile()
   {
     return $this->hasOne('Profile');

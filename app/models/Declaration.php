@@ -11,4 +11,9 @@ class Declaration extends Eloquent {
     'four'  => 'accepted',
 		'five'  => 'accepted',
 	];
+
+  public function user()
+  {
+    return $this->belongsTo('User');
+  }
 }
