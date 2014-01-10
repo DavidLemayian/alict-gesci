@@ -38,11 +38,11 @@
     </a>
 
     <a href="/declarations" class="list-group-item {{(Request::is('declarations')) ? 'active' : ''}}"  data-parent="#sidebar">
-        <i class="glyphicon glyphicon-ok"></i> Declarations
+        <i class="glyphicon glyphicon-list"></i> Declarations
     </a>
 
-    <a href="/user/logout" class="list-group-item"  data-parent="#sidebar">
-        <i class="glyphicon glyphicon-off"></i> Logout
+    <a href="/applications/submit" class="list-group-item"  data-parent="#sidebar">
+        <i class="glyphicon glyphicon-ok"></i> Submit Application
     </a>
 </div>
 </div>
