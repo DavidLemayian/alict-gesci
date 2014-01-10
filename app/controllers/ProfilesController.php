@@ -138,5 +138,4 @@ class ProfilesController extends BaseController {
 
 		return Redirect::route('profiles.index');
 	}
-
 }
