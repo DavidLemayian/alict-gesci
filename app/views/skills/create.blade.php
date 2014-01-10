@@ -88,11 +88,10 @@
             </div>
           </div>
 
-          </div>
           <div class="form-group">
             <label>8. List any computer courses you have taken: (text box)</label>
-            {{Form::textarea('nine', Input::old('nine'), ['class' => 'form-control'])}}
-        </div>
+            {{Form::textarea('eight', Input::old('eight'), ['class' => 'form-control'])}}
+          </div>
 
         <div class="form-group">
           <label>
@@ -113,7 +112,6 @@
           <br><br>
           <label for="nine_other">Name of Other applications and social utilities - please specify*</label>
           {{Form::text('nine_other', Input::old('nine_other'), ['class' => 'form-control'])}}
-        </div>
         </div>
         <div class="panel-footer">
           {{Form::submit('Save Skills', ['class' => 'btn btn-default btn-lg'])}}
