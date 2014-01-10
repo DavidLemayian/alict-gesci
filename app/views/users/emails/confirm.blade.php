@@ -22,7 +22,7 @@
             <p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; font-weight: normal; margin: 0 0 10px; padding: 0;">
               {{ Lang::get('confide::confide.email.account_confirmation.body') }}
             </p>&#13;
-            <a href="{{{ URL::to('user/confirm/{$user->confirmation_code}') }}}" style="text-decoration:none;color: #FFF;background-color: #348eda;padding:10px 20px;font-weight:bold;margin: 20px 10px 20px 0;text-align:center;cursor:pointer;display: inline-block;border-radius: 25px;">
+            <a href="{{ URL::to('user/confirm/'.$user->confirmation_code) }}" style="text-decoration:none;color: #FFF;background-color: #348eda;padding:10px 20px;font-weight:bold;margin: 20px 10px 20px 0;text-align:center;cursor:pointer;display: inline-block;border-radius: 25px;">
               Confirm Account
             </a>&#13;
 &#13;
