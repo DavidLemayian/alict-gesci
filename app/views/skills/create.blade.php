@@ -46,7 +46,7 @@
           </div>
 
           <div class="form-group">
-            <label>4. I have a: wireless or broadband connection at work</label>
+            <label>4. I have a wireless or broadband connection at work</label>
             <div class="radio">
               <label>{{Form::radio('four', 'Yes', ['class' => 'form-control'])}} Yes</label>
             </div>
@@ -56,7 +56,7 @@
           </div>
 
           <div class="form-group">
-            <label>5. I have a: wireless or broadband connection at home</label><br/>
+            <label>5. I have a wireless or broadband connection at home</label><br/>
               <div class="radio">
                 <label>{{Form::radio('five', 'Yes', ['class' => 'form-control'])}} Yes</label>
               </div>
