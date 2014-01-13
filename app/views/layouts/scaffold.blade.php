@@ -30,7 +30,7 @@
           <li {{(Request::is('/login')) ? 'class="active"' : '' }}><a href="/login">Register</a></li>
         @endif
       </ul>
-      <h3 class="text-muted">ALICT 2014</h3>
+      <h3 class="text-muted">ALICT {{date('Y')}}</h3>
     </div>
 	</div>
 		<div class="container">

@@ -29,7 +29,7 @@
       </div>
 
       <div class="form-group">
-        <label for="years_current_position">Number of years/months in current position</label>
+        <label for="years_current_position">Length of time in current position</label>
         {{Form::text('years_current_position', Input::old('years_current_position'), ['class' => 'form-control'])}}
       </div>
 

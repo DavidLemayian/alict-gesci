@@ -25,7 +25,7 @@
 
       <div class="form-group">
         {{ Form::label('delivery', 'Mode of Delivery:') }}
-        {{ Form::select('delivery', ['Online', 'Face-to-Face', 'Blended (Both)'], Input::old('delivery'), ['class' => 'form-control']) }}
+        {{ Form::select('delivery', Course::$delivery, Input::old('delivery'), ['class' => 'form-control']) }}
       </div>
 
       <div class="form-group">

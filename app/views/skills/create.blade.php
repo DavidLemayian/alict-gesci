@@ -89,7 +89,7 @@
           </div>
 
           <div class="form-group">
-            <label>8. List any computer courses you have taken: (text box)</label>
+            <label>8. List any computer courses you have taken.</label>
             {{Form::textarea('eight', Input::old('eight'), ['class' => 'form-control'])}}
           </div>
 
