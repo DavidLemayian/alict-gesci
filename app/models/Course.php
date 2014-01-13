@@ -12,6 +12,8 @@ class Course extends Eloquent {
 		'qualification'   => 'required'
 	];
 
+  public static $delivery = ['Online', 'Face-to-Face', 'Blended (Both)'];
+
   public function user()
   {
     return $this->belongsTo('User');

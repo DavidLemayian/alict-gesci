@@ -9,6 +9,9 @@ class Language extends Eloquent {
 		'written_english' => 'required',
 	];
 
+  public static $spoken_english = ['Fluent', 'Good Command', 'Basic'];
+  public static $written_english = ['Excellent' , 'Good', 'Basic'];
+
   public function user()
   {
     return $this->belongsTo('User');

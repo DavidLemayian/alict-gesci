@@ -13,7 +13,7 @@ class Education extends Eloquent {
 
   public static $qualifications =
   [
-    'PhD','Masters','Bachelors Honours','Bachelors 1st Class','Bachelors 2nd Class','Bachelors 3rd Class', 'Bachelors Pass',
+    'PhD', 'Masters', 'Bachelors Honours', 'Bachelors 1st Class', 'Bachelors 2nd Class', 'Bachelors 3rd Class', 'Bachelors Pass',
   ];
 
   public function user()

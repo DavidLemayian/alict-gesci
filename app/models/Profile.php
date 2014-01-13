@@ -17,6 +17,8 @@ class Profile extends Eloquent {
 		'passport'    => 'required',
 	];
 
+	public static $gender = [ 'Female', 'Male' ];
+
 	public function user()
 	{
 		return $this->belongsTo('User');
