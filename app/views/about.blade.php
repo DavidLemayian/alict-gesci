@@ -30,12 +30,13 @@
           <li {{(Request::is('/login')) ? 'class="active"' : '' }}><a href="/login">Register</a></li>
         @endif
       </ul>
-      <h3 class="text-muted">ALICT 2014</h3>
+      <h3 class="text-muted">ALICT {{date('Y')}}</h3>
     </div>
   </div>
     <div class="container">
           <div class="row">
-              </div>
+            @include('layouts.includes.status')
+          </div>
         <section id="login" class="gesci login" style="height: 737px;">
 <div class="wrap">
   <div class="form-container">
