@@ -38,6 +38,12 @@ Route::filter('auth', function()
 	if (Auth::guest()) return Redirect::guest('/login');
 });
 
+Route::filter('submitted', function()
+{
+	Application::firstOrCreate(['user_id' => Auth::user()->id]);
+  if (Auth::user()->application->submitted_at) return Redirect::route('applications.show', [Auth::user()->id]);
+});
+
 
 Route::filter('auth.basic', function()
 {

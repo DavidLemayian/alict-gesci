@@ -14,7 +14,7 @@
 Route::get('/', function(){
   return View::make('about');
 });
-Route::group(['before' => 'auth'], function(){
+Route::group(['before' => 'auth|submitted'], function(){
   Route::resource('declarations', 'DeclarationsController');
   Route::resource('statements', 'StatementsController');
   Route::resource('languages', 'LanguagesController');
@@ -24,6 +24,10 @@ Route::group(['before' => 'auth'], function(){
   Route::resource('educations', 'EducationsController');
   Route::resource('courses', 'CoursesController');
   Route::resource('profiles', 'ProfilesController');
+  Route::get('applications/submit', 'ApplicationsController@store');
+});
+Route::group(['before' => 'auth'], function(){
+  Route::resource('applications', 'ApplicationsController');
 });
 
 
