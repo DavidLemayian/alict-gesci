@@ -15,15 +15,15 @@ class CreateApplicationsTable extends Migration {
 		Schema::create('applications', function(Blueprint $table) {
 			$table->increments('id');
 			$table->mediumInteger('user_id');
-			$table->integer('profile');
-			$table->integer('education');
-			$table->integer('courses');
-			$table->integer('work_history');
-			$table->integer('supervisor');
-			$table->integer('skills');
-			$table->integer('languages');
-			$table->integer('statements');
-			$table->integer('declarations');
+			$table->integer('profiles')->nullable();
+			$table->integer('educations')->nullable();
+			$table->integer('courses')->nullable();
+			$table->integer('works')->nullable();
+			$table->integer('supervisors')->nullable();
+			$table->integer('skills')->nullable();
+			$table->integer('languages')->nullable();
+			$table->integer('statements')->nullable();
+			$table->integer('declarations')->nullable();
 			$table->timestamps();
 		});
 	}
