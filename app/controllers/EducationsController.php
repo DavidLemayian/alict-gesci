@@ -8,10 +8,12 @@ class EducationsController extends BaseController {
 	 * @var Education
 	 */
 	protected $education;
+	protected $application;
 
-	public function __construct(Education $education)
+	public function __construct(Education $education, Application $application)
 	{
 		$this->education = $education;
+		$this->application = Application::firstOrCreate(['user_id' => Auth::user()->id]);
 	}
 
 	/**
@@ -61,6 +63,7 @@ class EducationsController extends BaseController {
 		{
 			$education = new Education($input);
 			Auth::user()->education()->save($education);
+			$this->application->update(['educations' => 1]);
 
 			return Redirect::route('educations.index');
 		}
@@ -117,7 +120,7 @@ class EducationsController extends BaseController {
 		{
 			$education = $this->education->find($id);
 			$education->update($input);
-
+			$this->application->update(['educations' => 1]);
 			return Redirect::route('educations.index')->with('message', 'Record Updated.');
 		}
 

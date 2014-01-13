@@ -8,10 +8,12 @@ class DeclarationsController extends BaseController {
 	 * @var Declaration
 	 */
 	protected $declaration;
+	protected $application;
 
-	public function __construct(Declaration $declaration)
+	public function __construct(Declaration $declaration, Application $application)
 	{
 		$this->declaration = $declaration;
+		$this->application = Application::firstOrCreate(['user_id' => Auth::user()->id]);
 	}
 
 	/**
@@ -56,6 +58,7 @@ class DeclarationsController extends BaseController {
 		{
 			$declaration = new Declaration($input);
 			Auth::user()->declaration()->save($declaration);
+			$this->application->update(['declarations' => 1]);
 
 			return Redirect::route('declarations.index');
 		}
@@ -113,6 +116,7 @@ class DeclarationsController extends BaseController {
 		{
 			$declaration = $this->declaration->find($id);
 			$declaration->update($input);
+			$this->application->update(['declarations' => 1]);
 
 			return Redirect::route('declarations.index');
 		}

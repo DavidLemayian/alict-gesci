@@ -8,10 +8,12 @@ class ProfilesController extends BaseController {
 	 * @var Profile
 	 */
 	protected $profile;
+	protected $application;
 
-	public function __construct(Profile $profile)
+	public function __construct(Profile $profile, Application $application)
 	{
 		$this->profile = $profile;
+		$this->application = Application::firstOrCreate(['user_id' => Auth::user()->id]);
 	}
 
 	/**
@@ -60,6 +62,7 @@ class ProfilesController extends BaseController {
 		{
 			$profile = New Profile($input);
 			Auth::user()->profile()->save($profile);
+			$this->application->update(['profiles' => 1]);
 
 			return Redirect::route('profiles.index');
 		}
@@ -116,7 +119,7 @@ class ProfilesController extends BaseController {
 		{
 			$profile = $this->profile->find($id);
 			$profile->update($input);
-
+			$this->application->update(['profiles' => 1]);
 			return Redirect::route('profiles.index')->with('message', 'Profile Updated.');
 		}
 

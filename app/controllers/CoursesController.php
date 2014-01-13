@@ -8,10 +8,12 @@ class CoursesController extends BaseController {
 	 * @var Course
 	 */
 	protected $course;
+	protected $application;
 
-	public function __construct(Course $course)
+	public function __construct(Course $course, Application $application)
 	{
 		$this->course = $course;
+		$this->application = Application::firstOrCreate(['user_id' => Auth::user()->id]);
 	}
 
 	/**
@@ -50,6 +52,7 @@ class CoursesController extends BaseController {
 		{
 			$course = new Course($input);
 			Auth::user()->courses()->save($course);
+			$this->application->update(['courses' => 1]);
 
 			return Redirect::route('courses.index');
 		}
@@ -106,6 +109,7 @@ class CoursesController extends BaseController {
 		{
 			$course = $this->course->find($id);
 			$course->update($input);
+			$this->application->update(['courses' => 1]);
 
 			return Redirect::route('courses.show', $id);
 		}

@@ -8,10 +8,12 @@ class StatementsController extends BaseController {
 	 * @var Statement
 	 */
 	protected $statement;
+	protected $application;
 
-	public function __construct(Statement $statement)
+	public function __construct(Statement $statement, Application $application)
 	{
 		$this->statement = $statement;
+		$this->application = Application::firstOrCreate(['user_id' => Auth::user()->id]);
 	}
 
 	/**
@@ -54,6 +56,7 @@ class StatementsController extends BaseController {
 		{
 			$statement = new Statement($input);
 			Auth::user()->statement()->save($statement);
+			$this->application->update(['statements' => 1]);
 
 			return Redirect::route('statements.index');
 		}
@@ -110,6 +113,7 @@ class StatementsController extends BaseController {
 		{
 			$statement = $this->statement->find($id);
 			$statement->update($input);
+			$this->application->update(['statements' => 1]);
 
 			return Redirect::route('statements.index')->with('message', 'Statements Updated.');
 		}

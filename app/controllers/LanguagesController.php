@@ -8,10 +8,12 @@ class LanguagesController extends BaseController {
 	 * @var Language
 	 */
 	protected $language;
+	protected $application;
 
-	public function __construct(Language $language)
+	public function __construct(Language $language, Application $application)
 	{
 		$this->language = $language;
+		$this->application = Application::firstOrCreate(['user_id' => Auth::user()->id]);
 	}
 
 	/**
@@ -55,6 +57,7 @@ class LanguagesController extends BaseController {
 		{
 			$language = new Language($input);
 			Auth::user()->language()->save($language);
+			$this->application->update(['languages' => 1]);
 
 			return Redirect::route('languages.index');
 		}
@@ -111,6 +114,7 @@ class LanguagesController extends BaseController {
 		{
 			$language = $this->language->find($id);
 			$language->update($input);
+			$this->application->update(['languages' => 1]);
 
 			return Redirect::route('languages.index')->with('message', 'Record updated.');
 		}

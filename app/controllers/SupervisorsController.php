@@ -8,10 +8,12 @@ class SupervisorsController extends BaseController {
 	 * @var Supervisor
 	 */
 	protected $supervisor;
+	protected $application;
 
-	public function __construct(Supervisor $supervisor)
+	public function __construct(Supervisor $supervisor, Application $application)
 	{
 		$this->supervisor = $supervisor;
+		$this->application = Application::firstOrCreate(['user_id' => Auth::user()->id]);
 	}
 
 	/**
@@ -61,6 +63,7 @@ class SupervisorsController extends BaseController {
 		{
 			$supervisor = new Supervisor($input);
 			Auth::user()->supervisor()->save($supervisor);
+			$this->application->update(['supervisors' => 1]);
 
 			return Redirect::route('supervisors.index');
 		}
@@ -117,7 +120,7 @@ class SupervisorsController extends BaseController {
 		{
 			$supervisor = $this->supervisor->find($id);
 			$supervisor->update($input);
-
+			$this->application->update(['supervisors' => 1]);
 			return Redirect::route('supervisors.index')->with('message', 'Details Updated.');
 		}
 

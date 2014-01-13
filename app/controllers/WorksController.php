@@ -8,10 +8,12 @@ class WorksController extends BaseController {
 	 * @var Work
 	 */
 	protected $work;
+	protected $application;
 
-	public function __construct(Work $work)
+	public function __construct(Work $work, Application $application)
 	{
 		$this->work = $work;
+		$this->application = Application::firstOrCreate(['user_id' => Auth::user()->id]);
 	}
 
 	/**
@@ -55,6 +57,7 @@ class WorksController extends BaseController {
 
 			$works = new Work($input);
 			Auth::user()->work()->save($works);
+			$this->application->update(['works' => 1]);
 
 			return Redirect::route('works.index');
 		}
@@ -111,6 +114,7 @@ class WorksController extends BaseController {
 		{
 			$work = $this->work->find($id);
 			$work->update($input);
+			$this->application->update(['works' => 1]);
 
 			return Redirect::route('works.index')->with('message', 'Record Updated.');
 		}

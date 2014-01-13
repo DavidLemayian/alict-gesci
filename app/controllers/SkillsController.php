@@ -8,10 +8,12 @@ class SkillsController extends BaseController {
 	 * @var Skill
 	 */
 	protected $skill;
+	protected $application;
 
-	public function __construct(Skill $skill)
+	public function __construct(Skill $skill, Application $application)
 	{
 		$this->skill = $skill;
+		$this->application = Application::firstOrCreate(['user_id' => Auth::user()->id]);
 	}
 
 	/**
@@ -58,6 +60,7 @@ class SkillsController extends BaseController {
 			$skills = new Skill($this->skill->processInput($input));
 
 			Auth::user()->skill()->save($skills);
+			$this->application->update(['skills' => 1]);
 
 			return Redirect::route('skills.index');
 		}
@@ -114,6 +117,7 @@ class SkillsController extends BaseController {
 		{
 			$skill = $this->skill->find($id);
 			$skill->update($this->skill->processInput($input));
+			$this->application->update(['skills' => 1]);
 
 			return Redirect::route('skills.index')->with('message', 'Record Updated.');
 		}
