@@ -5,7 +5,7 @@ form ul { margin-left: 0; list-style: none; }
 .btn-blank {color: #FFF;background-color: none; border-color: #FFF;}
 .btn-blank:hover{color: #FFF; background-color: #3276b1;}
 .gesci.login .wrap {
-  padding-top: 150px;
+  padding-top: 100px;
 }
 .gesci .wrap {
   width: 100%;
