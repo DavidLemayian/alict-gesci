@@ -8,10 +8,10 @@ class Work extends Eloquent {
     'sponsoring_organisation'       => 'required',
     'sector'                        => 'required',
     'role'                          => 'required',
-    'number_of_years_in_org'        => 'required|numeric',
-    'years_current_position'        => 'required|numeric',
-    'individuals_supervised'        => 'required|numeric',
-    'years_professional_experience' => 'required|numeric',
+    'number_of_years_in_org'        => 'required',
+    'years_current_position'        => 'required',
+    'individuals_supervised'        => 'required',
+    'years_professional_experience' => 'required',
 	];
 
   public static $sponsors =
