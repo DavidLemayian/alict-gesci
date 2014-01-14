@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.0.*",
 		"zizaco/confide": "2.0.x",
-		"way/generators": "dev-master"
+		"way/generators": "dev-master",
+		"maatwebsite/excel": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
