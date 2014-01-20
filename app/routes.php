@@ -28,7 +28,8 @@ Route::group(['before' => 'auth|submitted'], function(){
   Route::get('applications/create', array('as' => 'applications.create', 'uses' => 'ApplicationsController@create'));
 });
 
-Route::get('/applications/{applications}', 'ApplicationsController@show');
+Route::get('/applications/{applications}', array('as' => 'applications.show', 'uses' => 'ApplicationsController@show'));
+Route::get('/applications', 'ApplicationsController@index');
 
 
 // Confide routes
