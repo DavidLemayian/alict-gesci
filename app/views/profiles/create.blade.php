@@ -7,6 +7,7 @@
   Create Profile
 </div>
 <div class="panel-body">
+<p>Very Important  (NAMES should appear as in their passports / or ID)</p>
 {{ Form::open(array('route' => 'profiles.store')) }}
   <div class="form-group">
     {{ Form::label('firstname', 'First name:') }}

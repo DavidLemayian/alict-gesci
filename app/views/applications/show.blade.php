@@ -44,7 +44,7 @@
         @include('layouts.includes.status')
     </div>
     <div class="row">
-        <h3>You ALICT Profile.</h3><hr>
+        <h3>Your ALICT Profile</h3><hr>
       <div class="well">
         <p>*****************************************************************</p>
         <p>PERSONAL INFORMATION</p>

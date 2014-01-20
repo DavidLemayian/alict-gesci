@@ -7,6 +7,7 @@
     Your Profile
 </div>
 <div class="panel-body">
+<p>Very Important  (NAMES should appear as in their passports / or ID)</p>
 {{ Form::model($profile, array('method' => 'PATCH', 'route' => array('profiles.update', $profile->id))) }}
     <div class="form-group">
         {{ Form::label('firstname', 'First name:') }}
