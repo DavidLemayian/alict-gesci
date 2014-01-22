@@ -115,7 +115,6 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'Zizaco\Confide\ConfideServiceProvider',
-		'Maatwebsite\Excel\ExcelServiceProvider',
 
 	),
 
@@ -182,7 +181,6 @@ return array(
 		'Validator'   => 'Illuminate\Support\Facades\Validator',
 		'View'        => 'Illuminate\Support\Facades\View',
 		'Confide'     => 'Zizaco\Confide\ConfideFacade',
-		'Excel' => 'Maatwebsite\Excel\Facades\Excel',
 
 	),
 
