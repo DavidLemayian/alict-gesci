@@ -52,8 +52,6 @@ class ApplicationsController extends BaseController
     }
 
     return Redirect::route('applications.create')
-      ->withInput()
-      ->withErrors($validation)
       ->with('message', 'Please login to complete profile submission.');
   }
 

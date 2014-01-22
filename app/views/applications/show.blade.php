@@ -53,7 +53,7 @@
         <p>Last name: {{ $profile->lastname }}</p>
         <p>Country of residence:  {{ Country::$countries[$profile->country] }}</p>
         <p>Gender: {{ Profile::$gender[$profile->gender] }}</p>
-        <p>Date of Birth: {{ $profile->dob }}</p>
+        <p>Date of Birth: {{ $profile->day }} - {{ $profile->month }} - {{ $profile->year }}</p>
         <p>Nationality: {{ $profile->nationality }}</p>
         <p>Workplace address: {{ $profile->workaddress }}</p>
         <p>Email address: {{ $profile->email }}</p>

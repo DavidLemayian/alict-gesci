@@ -24,7 +24,7 @@ Route::group(['before' => 'auth|submitted'], function(){
   Route::resource('educations', 'EducationsController');
   Route::resource('courses', 'CoursesController');
   Route::resource('profiles', 'ProfilesController');
-  Route::get('applications/submit', 'ApplicationsController@store');
+  Route::get('applications/submit', array('as' => 'applications.store', 'uses' =>'ApplicationsController@store'));
   Route::get('applications/create', array('as' => 'applications.create', 'uses' => 'ApplicationsController@create'));
 });
 

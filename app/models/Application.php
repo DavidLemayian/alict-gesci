@@ -30,12 +30,19 @@ class Application extends Eloquent
       if(!is_null($model->submitted_at))
       {
         $user = User::find($model->user_id);
-        $data = ['user' => $user];
+        $data = ['user' => $user, 'profile' => $user->profile, 'supervisor' => $user->supervisor];
         // Send user confirmation email for profile submission
         Mail::send('applications.emails.submission', $data, function($message) use ($user)
         {
           $message->subject('ALICT Course - Submission Confirmation');
-          $message->to($user->email)->cc($user->supervisor->primary_email);
+          $message->to($user->email);
+        });
+
+        // Send alert to supervisor different template with different text
+        Mail::send('applications.emails.alert', $data, function($message) use ($user)
+        {
+          $message->subject('ALICT Course - Submission Alert');
+          $message->to($user->supervisor->primary_email);
         });
       }
     });
