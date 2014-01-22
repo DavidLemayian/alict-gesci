@@ -18,7 +18,9 @@ class CreateProfilesTable extends Migration {
 			$table->string('lastname');
 			$table->string('country');
 			$table->string('gender');
-			$table->date('dob');
+			$table->integer('day');
+			$table->integer('month');
+			$table->integer('year');
 			$table->string('nationality');
 			$table->string('workaddress')->nullable();
 			$table->string('email')->unique();
