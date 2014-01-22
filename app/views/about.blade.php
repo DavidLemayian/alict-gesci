@@ -56,6 +56,12 @@
 
         <br><br>Please only apply for a place on the ALICT course if you can commit to at least <strong>15 hours</strong> of online course engagement a week for approximately <strong>8 months</strong> (excluding designated course break periods).
       </p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="row text-center">Reach us on {{HTML::mailto('helpdesk@gesci.org')}}</div>
       </div>
     </div>
   </div>
