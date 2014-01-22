@@ -31,7 +31,9 @@
 
     <div class="form-group">
       {{ Form::label('dob', 'Date of Birth:') }}
-      {{Form::text('dob', $profile->dob, ['class' => 'form-control', 'id' => 'datepicker'])}}
+      {{Form::selectYear('year', 1950, 1992, date('Y', strtotime($profile->year)))}}
+      {{Form::selectMonth('month', $profile->month)}}
+      {{Form::selectRange('day', 1, 30, $profile->day)}}
     </div>
 
     <div class="form-group">
