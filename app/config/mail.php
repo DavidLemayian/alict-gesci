@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'isaak@mogetutu.com', 'name' => 'ALICT 2014'),
+	'from' => array('address' => 'helpdesk@gesci.org', 'name' => 'ALICT 2014'),
 
 	/*
 	|--------------------------------------------------------------------------
