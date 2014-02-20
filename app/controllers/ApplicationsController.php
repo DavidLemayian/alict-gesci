@@ -34,7 +34,7 @@ class ApplicationsController extends BaseController
    */
   public function show($id)
   {
-    $application = Application::find($id);
+    $application = (Auth::user()) ? $this->application : Application::find($id);
     $user = (Auth::user()) ? : $application->user;
     $profile     = $user->profile;
     $education   = $user->education;
@@ -52,7 +52,7 @@ class ApplicationsController extends BaseController
     }
 
     return Redirect::route('applications.create')
-      ->with('message', 'Please login to complete profile submission.');
+      ->with('message', 'Application not complete for submission.');
   }
 
   /**
