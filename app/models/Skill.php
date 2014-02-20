@@ -5,15 +5,15 @@ class Skill extends Eloquent {
 
   public static $rules =
   [
-    'one'   => 'required',
-    'two'   => 'required',
-    'three' => 'required',
-    'four'  => 'required',
-    'five'  => 'required',
-    'six'   => 'required',
-    'seven' => 'required',
-    'eight' => 'required',
-    'nine'  => 'required',
+    'one'     => 'required',
+    'two'     => 'required',
+    'three'   => 'required',
+    'four'    => 'required',
+    'five'    => 'required',
+    'six'     => 'required',
+    'seven'   => 'required',
+    'eight'   => 'required',
+    'nine'    => 'required',
 	];
 
   public function user()

@@ -40,8 +40,12 @@ class SkillsController extends BaseController {
 	 */
 	public function create()
 	{
-		if (Auth::user()->skill) return Redirect::route('skills.index');
-		return View::make('skills.create');
+    $skill = Auth::user()->skill;
+    if ($skill)
+    {
+      return Redirect::route('skills.edit', $skill->id);
+    }
+    return View::make('skills.create');
 	}
 
 	/**
