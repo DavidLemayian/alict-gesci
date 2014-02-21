@@ -10,8 +10,8 @@ class Supervisor extends Eloquent {
 		'title'           => 'required',
 		'work_mobile'     => 'unique:profiles,mobile',
 		'telephone'       => 'unique:profiles,mobile',
-		'primary_email'   => 'required|email|unique:supervisors,primary_email',
-		'secondary_email' => 'email|unique:supervisors,secondary_email'
+		'primary_email'   => 'required|email|unique:supervisors,secondary_email',
+		'secondary_email' => 'email|unique:supervisors,primary_email'
 	];
 
 	public static $updateRules =
