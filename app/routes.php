@@ -31,6 +31,7 @@ Route::group(['before' => 'auth|submitted'], function(){
 
 Route::get('/applications/{applications}', array('as' => 'applications.show', 'uses' => 'ApplicationsController@show'));
 Route::get('/applications', 'ApplicationsController@index');
+Route::get('/remindars', 'RemindarsController@index');
 
 
 // Confide routes
