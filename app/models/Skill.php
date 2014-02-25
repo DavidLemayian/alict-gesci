@@ -32,10 +32,6 @@ class Skill extends Eloquent {
 
   public function processRecord($record)
   {
-    array_walk($record, function(&$value, $index){
-      if (Str::contains($value, ',')) (array) $value = explode(',', $value);
-    });
-
-    return (object) $record;
+    return explode(',', $record);
   }
 }

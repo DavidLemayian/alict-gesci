@@ -28,9 +28,10 @@ class SkillsController extends BaseController {
 		{
 			return Redirect::route('skills.create');
 		}
-		$skill = $this->skill->processRecord($skill->toArray());
 
-		return View::make('skills.edit', compact('skill'));
+		$nine = $this->skill->processRecord($skill->nine);
+
+		return View::make('skills.edit', compact('skill', 'nine'));
 	}
 
 	/**

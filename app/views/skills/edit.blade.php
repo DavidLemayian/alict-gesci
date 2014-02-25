@@ -99,15 +99,15 @@
           </label>
           <br>
           <select name="nine[]" id="skills-nine" multiple="multiple" class="form-control">
-              <option value="Microsoft Word" {{(($skill->nine) || isset($skill->nine[0])) ? "selected='selected'" : ''}}>Microsoft Word</option>
-              <option value="Microsoft Excel" {{(isset($skill->nine[1])) ? "selected='selected'" : ''}}>Microsoft Excel</option>
-              <option value="Microsoft Project" {{(isset($skill->nine[2])) ? "selected='selected'" : ''}}>Microsoft Project</option>
-              <option value="Lotus Notes" {{(isset($skill->nine[3])) ? "selected='selected'" : ''}}>Lotus Notes</option>
-              <option value="Facebook" {{(isset($skill->nine[4])) ? "selected='selected'" : ''}}>Facebook</option>
-              <option value="Google docs" {{(isset($skill->nine[5])) ? "selected='selected'" : ''}}>Google docs</option>
-              <option value="Google calendar" {{(isset($skill->nine[6])) ? "selected='selected'" : ''}}>Google calendar</option>
-              <option value="Gmail" {{(isset($skill->nine[7])) ? "selected='selected'" : ''}}>Gmail</option>
-              <option value="Skype" {{(isset($skill->nine[8])) ? "selected='selected'" : ''}}>Skype</option>
+              <option value="Microsoft Word" {{(($nine) || isset($nine[0])) ? "selected='selected'" : ''}}>Microsoft Word</option>
+              <option value="Microsoft Excel" {{(isset($nine[1])) ? "selected='selected'" : ''}}>Microsoft Excel</option>
+              <option value="Microsoft Project" {{(isset($nine[2])) ? "selected='selected'" : ''}}>Microsoft Project</option>
+              <option value="Lotus Notes" {{(isset($nine[3])) ? "selected='selected'" : ''}}>Lotus Notes</option>
+              <option value="Facebook" {{(isset($nine[4])) ? "selected='selected'" : ''}}>Facebook</option>
+              <option value="Google docs" {{(isset($nine[5])) ? "selected='selected'" : ''}}>Google docs</option>
+              <option value="Google calendar" {{(isset($nine[6])) ? "selected='selected'" : ''}}>Google calendar</option>
+              <option value="Gmail" {{(isset($nine[7])) ? "selected='selected'" : ''}}>Gmail</option>
+              <option value="Skype" {{(isset($nine[8])) ? "selected='selected'" : ''}}>Skype</option>
           </select>
           <br><br>
           <label for="nine_other">Name of Other applications and social utilities - please specify*</label>
