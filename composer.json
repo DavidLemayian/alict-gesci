@@ -4,8 +4,8 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.0.*",
-		"zizaco/confide": "2.0.x",
+		"laravel/framework": "4.1.*",
+		"zizaco/confide": "3.2.x",
 		"way/generators": "dev-master"
 	},
 	"autoload": {

@@ -34,25 +34,32 @@ class ApplicationsController extends BaseController
    */
   public function show($id)
   {
-    $application = (Auth::user()) ? $this->application : Application::find($id);
-    $user = (Auth::user()) ? : $application->user;
-    $profile     = $user->profile;
-    $education   = $user->education;
-    $courses     = $user->courses;
-    $work        = $user->work;
-    $supervisor  = $user->supervisor;
-    $skill       = $user->skill;
-    $language    = $user->language;
-    $statement   = $user->statement;
-    $declaration = $user->declaration;
-
-    if ($application->submitted_at)
+    $application = Application::find($id);
+    if ($application)
     {
-      return View::make('applications.show', compact('profile', 'education', 'courses', 'supervisor', 'work', 'language', 'skill', 'statement', 'declaration'));
-    }
+      $user        = $application->user;
+      $profile     = $user->profile;
+      $education   = $user->education;
+      $courses     = $user->courses;
+      $work        = $user->work;
+      $supervisor  = $user->supervisor;
+      $skill       = $user->skill;
+      $language    = $user->language;
+      $statement   = $user->statement;
+      $declaration = $user->declaration;
 
-    return Redirect::route('applications.create')
-      ->with('message', 'Application not complete for submission.');
+      if ($application->submitted_at)
+      {
+        return View::make('applications.show', compact('profile', 'education', 'courses', 'supervisor', 'work', 'language', 'skill', 'statement', 'declaration'));
+      }
+
+      return Redirect::route('applications.create')
+        ->with('message', 'Application not complete for submission.');
+    }
+    else
+    {
+      return Redirect::route('applications.create')->withErrors('Application not found.');
+    }
   }
 
   /**

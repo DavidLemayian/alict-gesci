@@ -6,7 +6,7 @@
 @endif
 @if ($errors->any())
 <div class="alert alert-danger">
-    <a class="close" data-dismiss="alert" href="#">×</a>
+  <a class="close" data-dismiss="alert" href="#">×</a>
   <ul>
     {{ implode('', $errors->all('<li class="error">:message</li>')) }}
   </ul>
