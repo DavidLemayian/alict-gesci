@@ -17,6 +17,37 @@ class ApplicationsController extends BaseController
     if (Auth::user()) $this->application = Application::firstOrCreate(['user_id' => Auth::user()->id]);
   }
 
+  public function index()
+  {
+    if(Auth::user())
+    {
+      $application = Application::where('user_id', Auth::user()->id)->first();
+      if ($application->submitted_at)
+      {
+        $user        = $application->user;
+        $profile     = $user->profile;
+        $education   = $user->education;
+        $courses     = $user->courses;
+        $work        = $user->work;
+        $supervisor  = $user->supervisor;
+        $skill       = $user->skill;
+        $language    = $user->language;
+        $statement   = $user->statement;
+        $declaration = $user->declaration;
+
+        return View::make('applications.show', compact('profile', 'education', 'courses', 'supervisor', 'work', 'language', 'skill', 'statement', 'declaration'));
+      }
+      else
+      {
+        return Redirect::route('applications.create')->with('message', 'Application not complete for submission.');
+      }
+    }
+    else
+    {
+      return Redirect::guest('/login');
+    }
+  }
+
   /**
    * Show the form for creating a new resource.
    *
@@ -34,8 +65,8 @@ class ApplicationsController extends BaseController
    */
   public function show($id)
   {
-    $application = Application::find($id);
-    if ($application)
+    $application = (Auth::user()) ? Application::where('user_id', Auth::user()->id)->first() : Application::find($id) ;
+    if ($application->submitted_at)
     {
       $user        = $application->user;
       $profile     = $user->profile;
@@ -48,17 +79,11 @@ class ApplicationsController extends BaseController
       $statement   = $user->statement;
       $declaration = $user->declaration;
 
-      if ($application->submitted_at)
-      {
-        return View::make('applications.show', compact('profile', 'education', 'courses', 'supervisor', 'work', 'language', 'skill', 'statement', 'declaration'));
-      }
-
-      return Redirect::route('applications.create')
-        ->with('message', 'Application not complete for submission.');
+      return View::make('applications.show', compact('profile', 'education', 'courses', 'supervisor', 'work', 'language', 'skill', 'statement', 'declaration'));
     }
     else
     {
-      return Redirect::route('applications.create')->withErrors('Application not found.');
+      return Redirect::route('applications.create')->with('message', 'Application not complete for submission.');
     }
   }
 
@@ -87,7 +112,7 @@ class ApplicationsController extends BaseController
     {
       $this->application->update(['submitted_at' => new DateTime]);
 
-      return Redirect::route('applications.show', [Auth::user()->id])->with('message', 'Application Successfully Submitted. See Details Below.');
+      return Redirect::route('applications.show', [$this->application->id])->with('message', 'Application Successfully Submitted. See Details Below.');
     }
 
     return Redirect::route('applications.create')
