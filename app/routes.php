@@ -31,7 +31,8 @@ Route::group(['before' => 'auth|submitted'], function(){
 
 Route::get('/applications/{applications}', array('as' => 'applications.show', 'uses' => 'ApplicationsController@show'));
 Route::get('/applications', 'ApplicationsController@index');
-Route::get('/reminders', 'RemindersController@index');
+Route::get('/reminders', 'RemindersController@submissionRemindar');
+Route::get('/reminders/application', 'RemindersController@applicationProfile');
 
 
 // Confide routes
