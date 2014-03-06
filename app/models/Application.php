@@ -7,6 +7,8 @@ class Application extends Eloquent
 {
   protected $guarded = [];
 
+  public static $search = ['email' => 'required|exists:users,email'];
+
   public static $rules =
   [
     'profiles'     => 'required',

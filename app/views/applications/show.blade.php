@@ -45,112 +45,165 @@
     </div>
     <div class="row">
         <h3>Your ALICT Profile</h3><hr>
-      <div class="well">
-        <p>*****************************************************************</p>
-        <p>PERSONAL INFORMATION</p>
-        <p>*****************************************************************</p>
-        <p>First name: {{ $profile->firstname }}</p>
-        <p>Last name: {{ $profile->lastname }}</p>
-        <p>Country of residence:  {{ Country::$countries[$profile->country] }}</p>
-        <p>Gender: {{ Profile::$gender[$profile->gender] }}</p>
-        <p>Date of Birth: {{ $profile->day }} - {{ $profile->month }} - {{ $profile->year }}</p>
-        <p>Nationality: {{ $profile->nationality }}</p>
-        <p>Workplace address: {{ $profile->workaddress }}</p>
-        <p>Email address: {{ $profile->email }}</p>
-        <p>Passport Number: {{ $profile->passport }}</p>
-        <p>Mobile number: {{ $profile->mobile }}</p>
-
-        <p>*****************************************************************</p>
-        <p>EDUCATIONAL INFORMATION</p>
-        <p>*****************************************************************</p>
-        <p>Highest Qualification: {{ Education::$qualifications[$education->highest_qualification] }}</p>
-        <p>Year of Graduation: {{ $education->graduation_year }}</p>
-        <p>Name of College/University/Institution: {{ $education->institution }}</p>
-        <p>Country: {{ $education->country }}</p>
-
-        <p>*****************************************************************</p>
-        RELEVANT PROFESSIONAL COURSES and TRAINING
-        <p>*****************************************************************</p>
-        @foreach ($courses as $course)
-          <p>Name of course: {{ $course->course }}</p>
-          <p>Institution/company delivering course: {{$course->institution}}</p>
-          <p>Course/training delivery: {{Course::$delivery[$course->delivery]}}</p>
-          <p>Year of completion: {{$course->graduation_year}}</p>
-          <p>Qualification: {{$course->qualification}}</p>
-        @endforeach
-
-        <p>*****************************************************************</p>
-        <p>WORK HISTORY:</p>
-        <p>*****************************************************************</p>
-        <p>Sponsoring Ministry/Organisation: {{$work->sponsoring_organisation}} </p>
-        <p>Other – {{$work->sponsoring_organisation_details}}</p>
-
-        <p>Sector/Department: {{$work->sector}}</p>
-        <p>Role/Position: {{$work->role}} </p>
-        <p>Other: {{$work->role_details}}</p>
-        <p>Number of years in organisation/ministry: {{$work->number_of_years_in_org}}</p>
-        <p>Number of years/months in current position: {{$work->years_current_position}}</p>
-        <p>Number of individuals directly supervised by you: {{$work->individuals_supervised}}</p>
-        <p>Number of years of professional experience: {{$work->years_professional_experience}}</p>
-
-        <p>*****************************************************************</p>
-        <p>YOUR SUPERVISOR’S INFORMATION</p>
-        <p>*****************************************************************</p>
-        <p>First name: {{$supervisor->firstname}}</p>
-        <p>Last name: {{$supervisor->lastname}}</p>
-        <p>Title: {{$supervisor->title}}</p>
-        <p>Work mobile number: {{$supervisor->work_mobile}}</p>
-        <p>Direct telephone number: {{$supervisor->telephone}}</p>
-        <p>Email addresses: {{$supervisor->primary_email}} or {{$supervisor->secondary_email}}</p>
-
-        <p>*****************************************************************</p>
-        <p>TECHNICAL SKILLS AND RELATED QUESTIONS</p>
-        <p>*****************************************************************</p>
-        Note: Access to a computer with Internet access at work and at home is required.
-        <p>1.  I am willing to use an internet cafe when I have no connectivity at home or in work: {{$skill->one}}</p>
-        <p>2.  I have a reliable internet connection at work: {{$skill->two}}</p>
-        <p>3.  I have a reliable internet connection at home: {{$skill->three}}</p>
-        <p>4.  I have a: wireless or broadband connection at work: {{$skill->four}}</p>
-        <p>5.  I have a: wireless or broadband connection at home: {{$skill->five}}</p>
-        <p>6.  I am able to participate in one-hour online chats once a week during working hours: {{$skill->six}}</p>
-        <p>7.  My job requires me to travel to places with poor or no connectivity: {{$skill->seven}}</p>
-        <p>8.  List any computer courses you have taken: {{$skill->eight}}</p>
-        <p>9.  I regularly use the following applications and social utilities: {{$skill->nine}}</p>
-        <p>Others: {{$skill->nine_other}}</p>
-
-        <p>*****************************************************************</p>
-        <p>LANGUAGE SKILLS</p>
-        <p>*****************************************************************</p>
-        <p>Spoken English: {{Language::$spoken_english[$language->spoken_english]}}</p>
-        <p>Written English: {{Language::$written_english[$language->written_english]}}</p>
-
-        <p>*****************************************************************</p>
-        <p>INDIVIDUAL STATEMENTS</p>
-        <p>*****************************************************************</p>
-        <p>What are your reasons for applying for a place on this course?
-            <br>
-            <strong>{{$statement->statement_one}}</strong>
-        </p>
-        <p>How do you think you might use the knowledge and skills acquired on this course to benefit your organisation?
-            <br>
-            <strong>{{$statement->statement_two}}</strong>
-        </p>
-        <p>Can you describe briefly any ambitions you have to pursue further academic studies?
-            <br>
-            <strong>{{$statement->statement_two}}</strong>
-        </p>
-
-        <p>*****************************************************************</p>
-        <p>DECLARATION</p>
-        <p>*****************************************************************</p>
-        <p>1.  To the best of my knowledge, the information on this application is accurate and complete. I understand that if I am offered a place I will be required to provide evidence of my qualifications. I agree to the processing and disclosure of all data on this form by GESCI connected with my studies, or for any other legitimate purpose, including the compilation of statistical analysis. (I agree – ticked)</p>
-        <p>2.  I agree that this data can be sent to my supervisor for verification purposes and to confirm that my supervisor has consented to my participation on this course should I be selected as a participant. (I agree – ticked)</p>
-        <p>3.  I accept the general terms and conditions of the ALICT course.     I certify that I will participate in the online training for a minimum of 15 hours a week, as well as participate in two face-to-face events in total. I understand the dates in the calendar (link to calendar) are approximate and can be adjusted by GESCI. (I agree –ticked)</p>
-        <p>4.  All GESCI learning materials provided in this course will not be shared with people outside the course and outside my organisation without first seeking GESCI’s permission. (I agree - ticked)</p>
-        <p>5.  All referenced GESCI authored materials must be attributed to GESCI. (I agree - ticked)</p>
-
-      </div>
-
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title">PERSONAL INFORMATION</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table table-bordered">
+                <tr>
+                    <th>First Name:</th>
+                    <td>{{ $profile->firstname }}</td>
+                </tr>
+                <tr>
+                    <th>Last Name:</th>
+                    <td>{{ $profile->lastname }}</td>
+                </tr>
+                <tr><th>Country of residence:  </th><td>{{ Country::$countries[$profile->country] }}</td></tr>
+                <tr><th>Gender: </th><td>{{ Profile::$gender[$profile->gender] }}</td></tr>
+                <tr><th>Date of Birth: </th><td>{{ $profile->day }} - {{ $profile->month }} - {{ $profile->year }}</td></tr>
+                <tr><th>Nationality: </th><td>{{ $profile->nationality }}</td></tr>
+                <tr><th>Workplace address: </th><td>{{ $profile->workaddress }}</td></tr>
+                <tr><th>Email address: </th><td>{{ $profile->email }}</td></tr>
+                <tr><th>Passport Number: </th><td>{{ $profile->passport }}</td></tr>
+                <tr><th>Mobile number: </th><td>{{ $profile->mobile }}</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">EDUCATIONAL INFORMATION</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Highest Qualification: </th>
+                        <td>{{ Education::$qualifications[$education->highest_qualification] }}</td>
+                    </tr>
+                    <tr><th>Year of Graduation: </th><td>{{ $education->graduation_year }}</td></tr>
+                    <tr><th>Name of College/University/Institution: </th><td>{{ $education->institution }}</td></tr>
+                    <tr><th>Country: </th><td>{{ $education->country }}</td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">RELEVANT PROFESSIONAL COURSES and TRAINING</h3>
+            </div>
+            <div class="panel-body">
+            @foreach ($courses as $course)
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Name of course: </th>
+                        <td>{{ $course->course }}</td>
+                    </tr>
+                    <tr><th>Institution/company delivering course: </th><td>{{$course->institution}}</td></tr>
+                    <tr><th>Name of College/University/Institution: </th><td>{{ $education->institution }}</td></tr>
+                    <tr><th>Course/training delivery: </th><td>{{Course::$delivery[$course->delivery]}}</td></tr>
+                    <tr><th>Year of completion: </th><td>{{$course->graduation_year}}</th></tr>
+                    <tr><th>Qualification: </th><td>{{$course->qualification}}</th></tr>
+                </table>
+            @endforeach
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">WORK HISTORY</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-bordered">
+                <tr><th>Sponsoring Ministry/Organisation: </th><td>{{$work->sponsoring_organisation}} </td></tr>
+                <tr><th>Other – </th><td>{{$work->sponsoring_organisation_details}}</td></tr>
+                <tr><th>Sector/Department: </th><td>{{$work->sector}}</td></tr>
+                <tr><th>Role/Position: </th><td>{{$work->role}} </td></tr>
+                <tr><th>Other: </th><td>{{$work->role_details}}</td></tr>
+                <tr><th>Number of years in organisation/ministry: </th><td>{{$work->number_of_years_in_org}}</td></tr>
+                <tr><th>Number of years/months in current position: </th><td>{{$work->years_current_position}}</td></tr>
+                <tr><th>Number of individuals directly supervised by you: </th><td>{{$work->individuals_supervised}}</td></tr>
+                <tr><th>Number of years of professional experience: </th><td>{{$work->years_professional_experience}}</td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">YOUR SUPERVISOR’S INFORMATION</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-bordered">
+                <tr><th>First name: </th><td>{{$supervisor->firstname}}</td></tr>
+                <tr><th>Last name: </th><td>{{$supervisor->lastname}}</td></tr>
+                <tr><th>Title: </th><td>{{$supervisor->title}}</td></tr>
+                <tr><th>Work mobile number: </th><td>{{$supervisor->work_mobile}}</td></tr>
+                <tr><th>Direct telephone number: </th><td>{{$supervisor->telephone}}</td></tr>
+                <tr><th>Email addresses: </th><td>{{$supervisor->primary_email}},  {{$supervisor->secondary_email or ''}}</td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">TECHNICAL SKILLS AND RELATED QUESTIONS</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-bordered">
+                <p><b>1.  I am willing to use an internet cafe when I have no connectivity at home or in work:</b> {{$skill->one}}</p>
+                <p><b>2.  I have a reliable internet connection at work: </b>{{$skill->two}}</p>
+                <p><b>3.  I have a reliable internet connection at home: </b>{{$skill->three}}</p>
+                <p><b>4.  I have a: wireless or broadband connection at work: </b>{{$skill->four}}</p>
+                <p><b>5.  I have a: wireless or broadband connection at home: </b>{{$skill->five}}</p>
+                <p><b>6.  I am able to participate in one-hour online chats once a week during working hours: </b>{{$skill->six}}</p>
+                <p><b>7.  My job requires me to travel to places with poor or no connectivity: </b>{{$skill->seven}}</p>
+                <p><b>8.  List any computer courses you have taken: </b>{{$skill->eight}}</p>
+                <p><b>9.  I regularly use the following applications and social utilities: </b>{{$skill->nine}}</p>
+                <p>Others: {{$skill->nine_other}}</p>
+                </table>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">LANGUAGE SKILLS</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-bordered">
+                <tr><th>Spoken English: </th><td>{{Language::$spoken_english[$language->spoken_english]}}</td></tr>
+                <tr><th>Written English: </th><td>{{Language::$written_english[$language->written_english]}}</td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">INDIVIDUAL STATEMENTS</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-bordered">
+                <tr><td>What are your reasons for applying for a place on this course?</td></tr>
+                <tr>
+                    <td><strong>{{$statement->statement_one}}</strong></td>
+                </tr>
+                <tr><td>How do you think you might use the knowledge and skills acquired on this course to benefit your organisation?
+                <tr>
+                    <td><strong>{{$statement->statement_two}}</strong></td>
+                </tr>
+                <tr><td>Can you describe briefly any ambitions you have to pursue further academic studies?
+                <tr>
+                    <td><strong>{{$statement->statement_two}}</strong></td>
+                </tr>
+                </table>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">DECLARATION</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-bordered">
+                <p>1.  To the best of my knowledge, the information on this application is accurate and complete. I understand that if I am offered a place I will be required to provide evidence of my qualifications. I agree to the processing and disclosure of all data on this form by GESCI connected with my studies, or for any other legitimate purpose, including the compilation of statistical analysis. <b>(I agree – ticked)</b></p>
+                <p>2.  I agree that this data can be sent to my supervisor for verification purposes and to confirm that my supervisor has consented to my participation on this course should I be selected as a participant. <b>(I agree – ticked)</b></p>
+                <p>3.  I accept the general terms and conditions of the ALICT course.     I certify that I will participate in the online training for a minimum of 15 hours a week, as well as participate in two face-to-face events in total. I understand the dates in the calendar (link to calendar) are approximate and can be adjusted by GESCI. <b>(I agree –ticked)</b></p>
+                <p>4.  All GESCI learning materials provided in this course will not be shared with people outside the course and outside my organisation without first seeking GESCI’s permission. <b>(I agree - ticked)</b></p>
+                <p>5.  All referenced GESCI authored materials must be attributed to GESCI. <b>(I agree - ticked)</b></p>
+                </table>
+            </div>
+        </div>
     </div>
   </div>
 </div>

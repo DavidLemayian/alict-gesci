@@ -29,8 +29,10 @@ Route::group(['before' => 'auth|submitted'], function(){
   Route::get('applications/create', array('as' => 'applications.create', 'uses' => 'ApplicationsController@create'));
 });
 
-Route::get('/applications/{applications}', array('as' => 'applications.show', 'uses' => 'ApplicationsController@show'));
 Route::get('/applications', 'ApplicationsController@index');
+Route::get('/applications/search', 'ApplicationsController@search_page');
+Route::post('/applications/search', 'ApplicationsController@search');
+Route::get('/applications/{applications}', array('as' => 'applications.show', 'uses' => 'ApplicationsController@show'));
 Route::get('/reminders', 'RemindersController@submissionRemindar');
 Route::get('/reminders/application', 'RemindersController@applicationProfile');
 
