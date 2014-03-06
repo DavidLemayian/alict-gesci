@@ -24,7 +24,7 @@
               This email is to inform you that {{Str::title($profile->firstname)}} {{Str::title($profile->lastname)}} has completed an application for the ALICT course.
 
             </p>&#13;
-            <a href="{{ URL::to('applications/'.$user->id) }}" style="text-decoration:none;color: #FFF;background-color: #348eda;padding:10px 20px;font-weight:bold;margin: 20px 10px 20px 0;text-align:center;cursor:pointer;display: inline-block;border-radius: 25px;">
+            <a href='{{ URL::to("applications/$profile->id") }}' style="text-decoration:none;color: #FFF;background-color: #348eda;padding:10px 20px;font-weight:bold;margin: 20px 10px 20px 0;text-align:center;cursor:pointer;display: inline-block;border-radius: 25px;">
               View Profile
             </a>&#13;
 &#13;

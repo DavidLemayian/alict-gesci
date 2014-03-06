@@ -30,7 +30,7 @@ class Application extends Eloquent
       if(!is_null($model->submitted_at))
       {
         $user = User::find($model->user_id);
-        $data = ['user' => $user, 'profile' => $user->profile, 'supervisor' => $user->supervisor];
+        $data = ['user' => $user, 'profile' => $user->application, 'supervisor' => $user->supervisor];
         // Send user confirmation email for profile submission
         Mail::send('applications.emails.submission', $data, function($message) use ($user)
         {
