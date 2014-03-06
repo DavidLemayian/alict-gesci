@@ -50,7 +50,7 @@
         <div class="horizontal-divider"></div>
       </div>
       <p class="lead sm">
-        GESCI is inviting candidates to apply for the online African Leadership in ICT (ALICT) course. Please see the selection criteria before applying (link to web page).  The closing date for applications is February 21, 2014.  All applicants must secure the consent of their supervisors before applying for a place on the ALICT course. All applicant information on this form will be sent to applicants’ supervisors. </p>
+        GESCI is inviting candidates to apply for the online African Leadership in ICT (ALICT) course. Please see the selection criteria before applying (link to web page).  The closing date for applications is 17th March 2014.  All applicants must secure the consent of their supervisors before applying for a place on the ALICT course. All applicant information on this form will be sent to applicants’ supervisors. </p>
 
         <strong>No course fees required.</strong>
 
