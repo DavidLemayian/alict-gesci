@@ -40,7 +40,10 @@ Route::get('/reminders/application', 'RemindersController@applicationProfile');
 // Confide routes
 Route::get('user/create',                 'UserController@create');
 Route::post('user',                       'UserController@store');
-Route::get('login',                       'UserController@login');
+// Route::get('login',                       'UserController@login');
+Route::get('login', function(){
+  return View::make('about');
+});
 Route::post('login',                      'UserController@do_login');
 Route::get('user/confirm/{code}',         'UserController@confirm');
 Route::get('user/forgot_password',        'UserController@forgot_password');

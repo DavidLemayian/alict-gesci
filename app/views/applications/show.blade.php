@@ -185,7 +185,7 @@
                 </tr>
                 <tr><td>Can you describe briefly any ambitions you have to pursue further academic studies?
                 <tr>
-                    <td><strong>{{$statement->statement_two}}</strong></td>
+                    <td><strong>{{$statement->statement_three}}</strong></td>
                 </tr>
                 </table>
             </div>
